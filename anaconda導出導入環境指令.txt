@@ -1,0 +1,6 @@
+
+導出環境，environment.yaml 為要導出的環境名稱，可自行命名
+conda env export > environment.yaml 
+
+導入安裝環境，environment.yaml 為要導出的環境名稱，可自行命名
+conda env create -f pytorch1.9.yaml
