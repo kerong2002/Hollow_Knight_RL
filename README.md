@@ -1,6 +1,11 @@
 # Hollow_Knight_RL
 
-
+## 修正
+- 2024/05/22 修正模型
+- 2024/05/23 模型探索測試(200次，勝率0%)
+- 2024/05/24 模型測試(200次，勝率6%)
+- 2024/05/25 模型修正(200次，勝率50%)
+- 2024/05/26 修正環境
 ## References 
 - [Playing Atari with Deep Reinforcement Learning](https://www.cs.toronto.edu/~vmnih/docs/dqn.pdf)
 - [Deep Reinforcement Learning with Double Q-learning](https://arxiv.org/abs/1509.06461)
