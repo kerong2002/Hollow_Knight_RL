@@ -90,14 +90,9 @@ def run_episode(hp, algorithm,agent,act_rmp_correct, move_rmp_correct,PASS_COUNT
         stations = thread1.get_buffer()
         boss_hp_value = hp.get_boss_hp()
         self_hp = hp.get_self_hp()
-        # player_x, player_y = hp.get_play_location()
-        # hornet_x, hornet_y = hp.get_hornet_location()
+
         soul = hp.get_souls()
 
-        # hornet_skill1 = False
-        # if last_hornet_y > 32 and last_hornet_y < 32.5 and hornet_y > 32 and hornet_y < 32.5:
-        #     hornet_skill1 = True
-        # last_hornet_y = hornet_y
 
         move, action = agent.sample(stations, soul)
 
@@ -155,7 +150,7 @@ def print_debug(str):
 if __name__ == '__main__':
     bring_window_to_front()
     config = tf.compat.v1.ConfigProto(allow_soft_placement=True)
-    config.gpu_options.allow_growth = True      #程序按需申请内存
+    config.gpu_options.allow_growth = True    
     sess = tf.compat.v1.Session(config = config)
 
     
