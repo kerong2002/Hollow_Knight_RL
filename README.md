@@ -21,5 +21,5 @@
 - https://github.com/toshikwa/fqf-iqn-qrdqn.pytorch/blob/master/fqf_iqn_qrdqn/network.py
 - https://github.com/pytorch/vision/blob/main/torchvision/models/vgg.py
 - https://www.youtube.com/watch?v=NP8pXZdU-5U
-- https://github.com/ailec0623/DQN_HollowKnight
+- https://github.com/seermer/HollowKnight_RL
 - https://github.com/ailec0623/DQN_HollowKnight
