@@ -1,5 +1,8 @@
 # Hollow_Knight_RL
 
+# Link
+[](https://www.youtube.com/watch?v=nSWwqOAj6XE)
+
 ## 修正
 - 2024/05/22 修正模型
 - 2024/05/23 模型探索測試(200次，勝率0%)
