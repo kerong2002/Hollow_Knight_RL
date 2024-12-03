@@ -1,7 +1,7 @@
 # Hollow_Knight_RL
 
 # Link
-[youtube](https://www.youtube.com/watch?v=nSWwqOAj6XE](https://www.youtube.com/watch?v=EeooyhH2kHc)
+[youtube](https://www.youtube.com/watch?v=nSWwqOAj6XE](https://www.youtube.com/watch?v=EeooyhH2kHc)](https://www.youtube.com/watch?v=EeooyhH2kHc)
 
 ## 修正
 - 2024/05/22 修正模型
