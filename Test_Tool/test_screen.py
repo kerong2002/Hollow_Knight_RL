@@ -1,5 +1,5 @@
 # 2024/05/22 kerong
-from get_hollow_screen import bring_window_to_front
+from Tool.get_hollow_screen import bring_window_to_front
 import cv2
 from Tool.WindowsAPI import grab_screen
 def main():

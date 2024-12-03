@@ -1,5 +1,5 @@
 from Tool.GetHP import Hp_getter
-from get_hollow_screen import bring_window_to_front
+from Tool.get_hollow_screen import bring_window_to_front
 
 
 def main():

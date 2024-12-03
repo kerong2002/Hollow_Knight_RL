@@ -81,7 +81,7 @@ class Hp_getter():
                                             ctypes.byref(offset_address), 4, None)
         return offset_address.value
 
-    # 獲取 Boss 生命值（僅限 hornet）
+    # 獲取 Boss 生命值
     def get_boss_hp(self):
         base_address = self.UnityPlayer + 0x00FEF994
         offset_address = ctypes.c_long()
@@ -94,3 +94,50 @@ class Hp_getter():
         elif offset_address.value < 0:
           return -1
         return offset_address.value
+
+    def get_play_location(self):
+        x = ctypes.c_long()
+        x.value += self.UnityPlayer + 0x00FEF994
+        offset_list = [0x4C, 0x4, 0x4, 0x10, 0x0]
+        self.kernal32.ReadProcessMemory(int(self.process_handle), x, ctypes.byref(x), 4, None)
+        for offset in offset_list:
+            self.kernal32.ReadProcessMemory(int(self.process_handle), x.value + offset, ctypes.byref(x), 4, None)
+        xx = ctypes.c_float()
+        self.kernal32.ReadProcessMemory(int(self.process_handle), x.value + 0x44, ctypes.byref(xx), 4, None)
+
+        y = ctypes.c_long()
+        y.value += self.UnityPlayer + 0x00FEF994
+        offset_list = [0x24, 0x104, 0x6C, 0x10, 0xAC]
+        self.kernal32.ReadProcessMemory(int(self.process_handle), y, ctypes.byref(y), 4, None)
+        for offset in offset_list:
+            self.kernal32.ReadProcessMemory(int(self.process_handle), y.value + offset, ctypes.byref(y), 4, None)
+
+        yy = ctypes.c_float()
+        self.kernal32.ReadProcessMemory(int(self.process_handle), y.value + 0xC, ctypes.byref(yy), 4, None)
+
+        return xx.value, yy.value
+
+    def get_hornet_location(self):
+        base_address = self.UnityPlayer + 0x00FEF994
+        x = ctypes.c_long()
+        offset_list = [0x20, 0x54, 0x24, 0x20, 0x5C]
+        self.kernal32.ReadProcessMemory(int(self.process_handle), base_address, ctypes.byref(x), 4, None)
+        for offset in offset_list:
+            self.kernal32.ReadProcessMemory(int(self.process_handle), x.value + offset, ctypes.byref(x), 4, None)
+
+        xx = ctypes.c_float()
+        self.kernal32.ReadProcessMemory(int(self.process_handle), x.value + 0xC, ctypes.byref(xx), 4, None)
+
+        base_address = self.UnityPlayer + 0x00FEF994
+        y = ctypes.c_long()
+        offset_list = [0x54, 0x8, 0x1C, 0x1C, 0x14]
+        self.kernal32.ReadProcessMemory(int(self.process_handle), base_address, ctypes.byref(y), 4, None)
+        for offset in offset_list:
+            self.kernal32.ReadProcessMemory(int(self.process_handle), y.value + offset, ctypes.byref(y), 4, None)
+
+        yy = ctypes.c_float()
+        self.kernal32.ReadProcessMemory(int(self.process_handle), y.value + 0xAC, ctypes.byref(yy), 4, None)
+
+        if xx.value > 14 and xx.value < 40:
+            self.hx = xx.value
+        return self.hx, yy.value

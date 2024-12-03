@@ -184,6 +184,7 @@ def restart():
         else:
             print("找到重啟")
             break
+        time.sleep(3)
     time.sleep(1)
     Look_up()
     time.sleep(1.5)
@@ -204,6 +205,8 @@ def restart():
             print("未找到開始")
             Look_up()
             time.sleep(0.2)
+        time.sleep(3)
+
 
 
 # 動作函數列表

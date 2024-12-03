@@ -1,12 +1,7 @@
 # 2024/05/22 kerong
 import time
-from get_hollow_screen import bring_window_to_front
-from Tool.Actions import take_action, restart, take_direction, TackAction
-from Agent import Agent
-from DQN import DQN
-from Model import Model
-
-
+from Tool.get_hollow_screen import bring_window_to_front
+from Tool.Actions import take_action, take_direction
 
 # 定義動作名稱和方向名稱
 action_name = ["Attack", "Attack_Up",
