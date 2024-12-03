@@ -14,11 +14,22 @@ class ReplayMemory:
     def append(self,exp):
         self.count += 1
         self.buffer.append(exp)
+        # save to file
+        # if self.count % self.size == 0:
+        #      self.save(self.file_name)
+
 
 
     def sample(self,batch_size):
         # random batch
         mini_batch = random.sample(self.buffer, batch_size)
+
+
+        # continually batches
+        # rd = random.randint(0, len(self.buffer) - batch_size)
+        # mini_batch = []
+        # for i in range(rd, rd + batch_size):
+        #     mini_batch.append(self.buffer[i])
 
         obs_batch, action_batch, reward_batch, next_obs_batch, done_batch = [], [], [], [], []
 
