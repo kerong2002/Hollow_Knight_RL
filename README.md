@@ -3,15 +3,41 @@
 # Link
 https://www.youtube.com/watch?v=EeooyhH2kHc
 
-## 修正
-- 2024/05/22 修正模型
-- 2024/05/23 模型探索測試(200次，勝率0%)
-- 2024/05/24 模型測試(200次，勝率6%)
-- 2024/05/25 模型修正(200次，勝率50%)
-- 2024/05/26 修正環境
-- 2024/05/29 發現獎勵有問題，修正擷取玩家血量的方式
+# 🏆 Reinforcement Learning in *Hollow Knight* with Image Processing
 
+## 📌 Overview
 
+This project explores the application of **Deep Reinforcement Learning (DRL)** in the side-scrolling action game *Hollow Knight*. By leveraging **image processing techniques** and **deep learning models**, we aim to train an AI agent capable of autonomously navigating and making optimal decisions in the game environment.
+
+Through this research, we contribute to **AI-driven gameplay learning**, emphasizing the potential of **vision-based reinforcement learning** in complex, dynamic gaming environments.
+
+---
+
+## 🎯 Objectives
+
+- 🕹 **Train an AI agent** to autonomously play *Hollow Knight* using **Deep Reinforcement Learning**.
+- 🎥 **Utilize image processing** to extract meaningful features from raw game footage.
+- 🧠 **Leverage neural networks** (e.g., CNNs, ResNet) to improve **decision-making strategies**.
+- 📊 **Evaluate performance** across different architectures and training strategies.
+
+---
+
+## ⚙️ Methodology
+
+### 1️⃣ **Game Environment**
+- The game *Hollow Knight* is used as the **training environment**.
+- Gameplay footage is captured and converted into **image frames** for processing.
+
+### 2️⃣ **Image Processing & Feature Extraction**
+- **Preprocessing**: Convert game frames into grayscale, resize, and normalize pixel values.
+- **Feature extraction**: Use **ResNet-based Convolutional Neural Networks (CNNs)** to analyze and extract features.
+- **Frame Stacking**: Stack consecutive frames to capture motion dynamics.
+
+### 3️⃣ **Deep Reinforcement Learning (DRL)**
+- **Algorithm**: Implement **Deep Q-Network (DQN)** to enable the agent to learn through trial and error.
+- **State Representation**: Use **processed image frames** as input to the neural network.
+- **Action Selection**: Choose the best action based on the **Q-values** estimated by the network.
+<!--
 # Action
 ## 攻擊
 | 動作名稱 |     動作函數     |    按鍵    |
@@ -33,6 +59,7 @@ https://www.youtube.com/watch?v=EeooyhH2kHc
 |   向右   | Move_Right() | RIGHT(long)  |
 |  轉頭左   | Turn_Left()  | LEFT(short)  |
 |  轉頭右   | Turn_Right() | RIGHT(short) |
+-->
 
 ## References 
 - [Playing Atari with Deep Reinforcement Learning](https://www.cs.toronto.edu/~vmnih/docs/dqn.pdf)
